@@ -1,0 +1,43 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0px;
+}
+
+.Navbar {
+    display: flex;
+    background-color: #25283D;
+    color: #EFD9CE;
+    padding: 1em;
+}
+
+.leftsideNav {
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.Navbar ul {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 1em;
+}
+
+li {
+    padding: 1em;
+    list-style-type: none;
+}
+
+#ContactButton {
+    border: 2px #8F3985 solid;
+    border-radius: 15px;
+    background-color: #A675A1 ;
+    padding: 7px;
+    cursor: pointer;
+}
+
+#ContactButton:hover {
+    background-color: #8F3985;
+}
