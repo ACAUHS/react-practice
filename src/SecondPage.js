@@ -1,21 +1,28 @@
 import { useState } from "react";
+import bread1 from "./assets/bread1.jpg"
+import bread2 from "./assets/bread2.jpg"
 
 export default function SecondPage() {
-    return (<div>
-      <BakeryItem breadName = "Sourdough"></BakeryItem>
-      <BakeryItem breadName = "Hot dog bun"></BakeryItem>
-      <BakeryItem breadName = "bagel"></BakeryItem>
+    return (<div className="flex mainContent">
+      <BakeryItem breadName="Sourdough" breadImage={bread1}>This is the description</BakeryItem>
+      <BakeryItem breadName="Hot dog bun" breadImage={bread2}>This is another description</BakeryItem>
+      <BakeryItem breadName="bagel" breadImage={bread1}>I love eating bread with peanut butter</BakeryItem>
     </div>)
 }
 
-function BakeryItem(props) {
+const BakeryItem = ({breadName, breadImage, children}) => { 
+    
     const [open, setOpen] = useState(false);
 
+    const handleClick = event => {
+        setOpen(current => !current);
+    }
+
     return (
-        <div>
-            <h4>{props.breadName}</h4>
-            <img src={props.breadImage} />
-            <div className="breadDescription">{props.children}</div>
+        <div className="breadCard flex">
+            <h4 onClick={handleClick}>{breadName}</h4> 
+            {open && <div> <img src={breadImage} />
+                <div> {children}</div>
+                </div>}
         </div>
-    )
-}
+    )}

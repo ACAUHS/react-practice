@@ -3,6 +3,11 @@
     margin: 0px;
 }
 
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .Navbar {
     display: flex;
     background-color: #25283D;
@@ -28,6 +33,32 @@
 li {
     padding: 1em;
     list-style-type: none;
+}
+
+.mainContent {
+    gap:7em;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+.breadCard {
+    width: 10em;
+    justify-content: center;
+    border: #25283D 2px solid;
+    border-radius: 18px;
+}
+
+.breadCard h4 {
+    font-size: larger;
+}
+
+.breadCard img{
+    width: 100%;
+    margin: 1em 1em;
+}
+
+.breadDescription {
+    padding: 1em;
 }
 
 #ContactButton {
