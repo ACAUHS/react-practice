@@ -21,8 +21,10 @@ const BakeryItem = ({breadName, breadImage, children}) => {
     return (
         <div className="breadCard flex">
             <h4 onClick={handleClick}>{breadName}</h4> 
-            {open && <div> <img src={breadImage} />
-                <div> {children}</div>
-                </div>}
+            {open &&
+            <div>
+                <img src={breadImage} />
+                <div>{children}</div>
+            </div>}
         </div>
     )}
